@@ -14,7 +14,7 @@ with col1:
 
 with col2:
     logo_path = "Artisma+Transperant+WHITE.png"
-    st.image(logo_path, width=170)
+    st.image(logo_path, width=150)
 
 
 # Load the data

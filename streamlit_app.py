@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 st.set_page_config(layout="wide")
 
 # Create two columns: one for the title and one for the logo
-col1, col2 = st.columns([7, 1], vertical_alignment="bottom")
+col1, col2 = st.columns([15, 1], vertical_alignment="bottom")
 
 with col1:
     st.title("Artisma Dash")
@@ -46,7 +46,7 @@ bar_fig = px.bar(
     x='Invoice Week',
     y='Invoice Amount',
     color='Status',
-    title="Invoice Amount by Week and Status",
+    title="Weekly Revenue",
     labels={'Invoice Week': 'Invoice Date Week', 'Invoice Amount': 'Invoice Amount ($)'},
     color_discrete_map=color_discrete_map
 )
@@ -75,10 +75,11 @@ area_fig.add_trace(go.Scatter(
 
 # Set the layout for the area chart
 area_fig.update_layout(
-    title="Running Cumulative Invoice Amount Over Time",
+    title="Cumulative Revenue",
     xaxis_title="Invoice Date",
     yaxis_title="Cumulative Invoice Amount ($)",
-    dragmode="pan"
+    dragmode="pan",
+    height=900
 )
 
 # Display the bar chart first

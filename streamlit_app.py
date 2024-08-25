@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 st.set_page_config(layout="wide")
 
 # Create two columns: one for the title and one for the logo
-col1, col2 = st.columns([15, 1], vertical_alignment="bottom")
+col1, col2 = st.columns([10, 1], vertical_alignment="bottom")
 
 with col1:
     st.title("Artisma Dash")
